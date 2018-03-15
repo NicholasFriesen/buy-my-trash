@@ -1,23 +1,23 @@
 :root {
-  --main-bg-color-purple: purple;
-  --main-bg-color-red: red;
-  --main-bg-color-green: green;
-  --main-bg-color-blue: blue;
+  --main-color-purple: purple;
+  --main-color-red: red;
+  --main-color-green: green;
+  --main-color-blue: blue;
 }
 
 hr {
-border-top: solid var(--main-bg-color-purple);;
+border-top: solid var(--main-color-purple);;
 }
 
 .grid-product__on-sale {
-  border: 1px solid var(--main-bg-color-purple);;
-  color: var(--main-bg-color-purple);;
+  border: 1px solid var(--main-color-purple);;
+  color: var(--main-color-purple);;
 }
 
 .announcement-bar__message {
-  border-bottom: 2px solid var(--main-bg-color-purple);;
+  border-bottom: 2px solid var(--main-color-purple);;
 }
 .cart-link__bubble, .cart-link__bubble--visible {
-  color: var(--main-bg-color-purple);;
-  background: var(--main-bg-color-purple);;
+  color: var(--main-color-purple);;
+  background: var(--main-color-purple);;
 }
