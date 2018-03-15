@@ -1,0 +1,12 @@
+hr {
+border-top: solid green;
+}
+
+.grid-product__on-sale {
+  border: 1px solid green;
+  color: green;
+}
+
+.announcement-bar__message {
+  background: green;
+}
