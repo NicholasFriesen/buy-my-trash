@@ -157,7 +157,10 @@
               <p><em>{{ 'cart.general.shipping_at_checkout' | t }}</em></p>
               <button type="submit" name="update" class="btn--secondary update-cart">{{ 'cart.general.update' | t }}</button>
               <button type="submit" name="checkout" class="btn cart__checkout">
-                {{ 'cart.general.checkout' | t }} <span class="icon icon-arrow-right" aria-hidden="true"></span>
+                {% comment %}
+                  {{ 'cart.general.checkout' | t }} 
+                {% endcomment %}
+                My Tutorial <span class="icon icon-arrow-right" aria-hidden="true"></span>
               </button>
 
               {% if additional_checkout_buttons and settings.cart_type != 'drawer' %}
