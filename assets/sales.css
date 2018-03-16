@@ -1,23 +1,32 @@
 :root {
-  --main-color-purple: purple;
-  --main-color-red: red;
-  --main-color-green: green;
-  --main-color-blue: blue;
+  --color-sale: var(--color-purple);;
+  
+  --color-purple: purple;
+  --color-red: red;
+  --color-green: green;
+  --color-blue: blue;
 }
 
-hr {
-border-top: solid var(--main-color-purple);;
+hr, .cart__row:last-child {
+border-top: 1px solid var(--color-sale);;
 }
 
+.cart__row:first-child {
+  border-bottom: 1px solid var(--color-sale);;
+}  
+  
 .grid-product__on-sale {
-  border: 1px solid var(--main-color-purple);;
-  color: var(--main-color-purple);;
+  border: 1px solid var(--color-sale);;
+  color: var(--color-sale);;
 }
 
-.announcement-bar__message {
-  border-bottom: 2px solid var(--main-color-purple);;
+.announcement-bar__message, .cart__row medium-down--hide cart__header-labels {
+  border-bottom: 2px solid var(--color-sale);;
 }
 .cart-link__bubble, .cart-link__bubble--visible {
-  color: var(--main-color-purple);;
-  background: var(--main-color-purple);;
+  color: var(--color-sale);;
+  background: var(--color-sale);;
+}
+.update-cart {
+  background: var(--color-sale);;
 }
