@@ -177,9 +177,18 @@
   <div id="SearchModal" class="mfp-hide">
     {% include 'search-bar', search_btn_style: 'btn', search_bar_location: 'search-bar--modal' %}
   </div>
+  
+    <!-- tutorialize ================================================== -->
+  	<!-- Use a button to open the snackbar -->
+    <button class="tut__button" onclick="myFunction()">Need Help?</button>
+
+    <div id="tut__message">Welcome! There are helper buttons across the site. They are mean't to guide you through this site for an easy navigation.</div>
 
     <!-- tilt.js ================================================== -->
   {{ 'vanilla-tilt.js' | asset_url | script_tag }}  
+  
+    <!-- message.js ================================================== -->
+  {{ 'message.js' | asset_url | script_tag }}  
   
     <!-- sales.css ================================================== -->
   {{ 'sales.css' | asset_url | stylesheet_tag }}
