@@ -1,11 +1,6 @@
 :root {
   /* Feature Collection Variable */
-  --color-sale: var(--color-purple);;
-  
-  --color-purple: purple;
-  --color-red: red;
-  --color-green: green;
-  --color-blue: blue;
+  --color-sale: purple;
 }
   
   /* Color Changes */
