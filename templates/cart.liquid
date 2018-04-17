@@ -8,11 +8,31 @@
 {% endcomment %}
 <div class="grid">
   <div class="grid__item large--five-sixths push--large--one-twelfth">
+    
     {% if cart.item_count > 0 %}
       <header class="section-header text-center">
         <h1 class="text-center">{{ 'cart.general.title' | t }}</h1>
         <hr class="hr--small">
       </header>
+    <button class="btn cart__button" onClick="Message('cart__message', 'false')">
+                My Tutorial
+              </button>
+              
+              <div id="cart__message">
+                <p><b>Try out 'MY CHECKOUT' for free!</b></p>
+                
+                <p>Name on card: Enter at least two words.</p>
+                
+                <p>Expiry date: Enter any date in the future.</p>
+                
+                <p>CVV: Enter any three digits.</p>
+                
+                <p>Card number: 4242424242424242</p>
+                
+                <button class="btn cart__button" style="text-align: center;" onClick="CloseMessage('cart__message')">
+                   Close Message
+                </button>
+              </div>
 
       <form action="/cart" method="post" novalidate class="cart">
 
@@ -149,20 +169,23 @@
                   <p class="cart__subtotal">{{ cart.total_price | money }}</p>
                 </div>
               </div>
+              
+              
 
               {% if cart.total_discounts > 0 %}
                 {% assign cartTotalDiscounts = cart.total_discounts | money %}
                 <p class="cart__savings">{{ 'cart.general.savings_html' | t: savings: cartTotalDiscounts }}</p>
               {% endif %}
               <p><em>{{ 'cart.general.shipping_at_checkout' | t }}</em></p>
-              <button type="submit" name="update" class="btn--secondary update-cart">{{ 'cart.general.update' | t }}</button>
+              <button type="submit" name="update" class="btn--secondary update-cart">{{ 'cart.general.update' | t }}</button>     
+              
               <button type="submit" name="checkout" class="btn cart__checkout">
                 {% comment %}
                   {{ 'cart.general.checkout' | t }} 
                 {% endcomment %}
-                My Tutorial <span class="icon icon-arrow-right" aria-hidden="true"></span>
+                My Checkout <span class="icon icon-arrow-right" aria-hidden="true"></span>
               </button>
-
+              
               {% if additional_checkout_buttons and settings.cart_type != 'drawer' %}
                 <div class="additional_checkout_buttons">{{ content_for_additional_checkout_buttons }}</div>
               {% endif %}
